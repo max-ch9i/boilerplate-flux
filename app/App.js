@@ -1,22 +1,23 @@
 import React from 'react';
-import {Component} from 'react';
 import {Container} from 'flux/utils';
 import DataStore from './DataStore.js';
+import Table from './Table.js';
 
-class App extends Component {
+class App extends React.Component {
     static getStores() {
         return [DataStore];
     }
 
     static calculateState(prevState) {
         return {
-            counter: DataStore.getState()
+            data: DataStore.getState()
         }
     }
 
     render() {
-        return <h1>Test</h1>;
+        return <Table data={this.state.data}/>;
     }
 }
 
-export default Container.create(App);
+const app = Container.create(App);
+export default app;
