@@ -3,6 +3,8 @@ import {ReduceStore} from 'flux/utils';
 import Firebase from 'firebase';
 import Immutable from 'immutable';
 
+var _order = Immutable.List.of(-1, 1);
+
 class DataStore extends ReduceStore {
     getInitialState() {
         const firebaseRef = new Firebase('https://volleyup.firebaseio.com/flux');
@@ -18,9 +20,10 @@ class DataStore extends ReduceStore {
     reduce(state, action) {
         switch(action.type) {
             case 'sort:rank':
-                //return DataSorter.toggleSort(state);
-                // TODO: rewrite with the immutable
-                return state;
+                _order = _order.reverse();
+                return state.sort(function(a, b) {
+                    return a.get('rank') > b.get('rank') ? _order.first() : _order.last();
+                });
                 break;
             case 'fire:load':
                 return state.merge(action.data);
