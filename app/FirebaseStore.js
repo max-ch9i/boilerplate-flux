@@ -17,7 +17,7 @@ class DataStore extends ReduceStore {
         return Immutable.List();
     }
 
-    reduce(state, action) {
+    reduce(state: Immutable.List, action) {
         switch(action.type) {
             case 'sort:rank':
                 _order = _order.reverse();
