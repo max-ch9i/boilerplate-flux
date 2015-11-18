@@ -1,5 +1,5 @@
 import React from 'react';
-import {dispatch} from '../data/AppDispatcher'
+import {dispatch} from '../data/AppDispatcher';
 
 type Props = {
     data: Immutable.List<Immutable.Map>

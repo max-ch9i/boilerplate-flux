@@ -1,3 +1,5 @@
+import {dispatch} from '../data/AppDispatcher';
+
 const data = [
   {
     "key": "56488a335b3ae958f3eb6343",
@@ -26,4 +28,7 @@ const data = [
   }
 ];
 
-export default data;
+dispatch({
+    type: 'populate:init',
+    data: data
+});

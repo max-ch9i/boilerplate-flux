@@ -2,6 +2,7 @@ import React from 'react';
 import {Container} from 'flux/utils';
 import DataStore from './data/DataStore';
 import Table from './components/Table';
+import './data/data';
 
 type State = {
     data: Immutable.List<Immutable.Map>
