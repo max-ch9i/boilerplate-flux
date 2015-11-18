@@ -1,8 +1,9 @@
 ### Preinstall
 
-Run:
- * npm install browserify -g
- * npm install watchify -g
+```
+npm install browserify -g
+npm install watchify -g
+```
 
 ### Build
 
