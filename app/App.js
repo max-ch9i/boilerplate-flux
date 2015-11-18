@@ -1,17 +1,21 @@
 import React from 'react';
 import {Container} from 'flux/utils';
-import DataStore from './DataStore.js';
-import Table from './Table.js';
+import DataStore from './data/DataStore';
+import Table from './components/Table';
 
-class App extends React.Component {
-    static getStores() {
+type State = {
+    data: Immutable.List<Immutable.Map>
+};
+
+class Fire extends React.Component<{}, {}, State> {
+    static getStores(): Array<Store> {
         return [DataStore];
     }
 
-    static calculateState(prevState) {
+    static calculateState(prevState): State {
         return {
             data: DataStore.getState()
-        }
+        };
     }
 
     render() {
@@ -19,5 +23,5 @@ class App extends React.Component {
     }
 }
 
-const app = Container.create(App);
-export default app;
+const fire = Container.create(Fire);
+export default fire;

@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App.js';
-import Fire from './Fire.js';
+import App from './App';
 
 ReactDOM.render(
-    // <App/>, or
-    <Fire/>,
+    <App/>,
     document.getElementById('vu')
 );

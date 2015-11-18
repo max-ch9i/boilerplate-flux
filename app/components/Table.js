@@ -1,16 +1,22 @@
 import React from 'react';
-import {dispatch} from './AppDispatcher.js'
+import {dispatch} from '../data/AppDispatcher'
 
-class Table extends React.Component {
+type Props = {
+    data: Immutable.List<Immutable.Map>
+};
+
+class Table extends React.Component<{}, Props, {}> {
     constructor(props) {
         super(props);
     }
+
     _sortRank(e) {
         e.preventDefault();
         dispatch({
             type: 'sort:rank'
         });
     }
+
     render() {
         return (
             <table>
@@ -23,9 +29,9 @@ class Table extends React.Component {
                 <tbody>
                     {this.props.data.map(function(item){
                         return (
-                            <tr key={item.key}>
-                                <td>{item.name}</td>
-                                <td>{item.rank}</td>
+                            <tr key={item.get('key')}>
+                                <td>{item.get('name')}</td>
+                                <td>{item.get('rank')}</td>
                             </tr>
                         );
                     })}
