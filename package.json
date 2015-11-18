@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "preinstall": "npm install browserify -g && npm install watchify -g",
     "build": "watchify -t [ babelify --presets [ es2015 react ] ] app/main.js -o dist/build.js --fast",
     "live": "live-server",
     "test": "echo \"Error: no test specified\" && exit 1"
