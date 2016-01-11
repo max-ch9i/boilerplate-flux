@@ -3,18 +3,23 @@
   "version": "1.0.0",
   "description": "A simple boilerplate of the Flux architecture with the async dispatcher.",
   "scripts": {
-    "build": "watchify -t [ babelify --presets [ es2015 react ] ] app/main.js -o dist/build.js --fast",
+    "build": "watchify -t [ babelify --presets [ es2015 react stage-0] ] app/main.js -o dist/build.js --fast",
     "live": "live-server"
+  },
+  "repository": {
+    "type" : "git",
+    "url": "https://github.com/maximus8891/boilerplate-flux"
   },
   "author": "Max Chernyavskyi <xamydnah@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "babel-preset-es2015": "^6.1.18",
     "babel-preset-react": "^6.1.2",
+    "babel-preset-stage-0": "^6.1.18",
     "babelify": "^7.2.0",
     "browserify": "^12.0.1",
-    "firebase": "^2.3.1",
     "flux": "^2.1.1",
+    "flux-queue-dispatcher": "^0.1.0",
     "live-server": "^0.8.2",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
