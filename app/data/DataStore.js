@@ -1,17 +1,15 @@
 import AppDispatcher, {dispatch} from './AppDispatcher.js';
 import {ReduceStore} from 'flux/utils';
-import Firebase from 'firebase';
 import Immutable from 'immutable';
-import type {Action} from './Actions';
 
 var _order = Immutable.List.of(-1, 1);
 
-class DataStore extends ReduceStore<Immutable.List<Immutable.Map>> {
-    getInitialState(): Immutable.List<Immutable.Map>  {
+class DataStore extends ReduceStore {
+    getInitialState() {
         return Immutable.List();
     }
 
-    reduce(state: Immutable.List<Immutable.Map>, action: Action) {
+    reduce(state, action: Action) {
         switch(action.type) {
             case 'populate:init':
                 return state.merge(action.data);
