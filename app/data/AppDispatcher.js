@@ -1,6 +1,5 @@
-import {Dispatcher} from 'flux';
-import type {Action} from './Actions';
+import QueueDispatcher from 'flux-queue-dispatcher';
 
-const disp: Dispatcher<Action> = new Dispatcher();
-export default disp;
-export const dispatch = disp.dispatch.bind(disp);
+var dispatcher = new QueueDispatcher();
+export default dispatcher;
+export const dispatch = dispatcher.queueDispatch.bind(dispatcher);

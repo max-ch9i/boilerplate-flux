@@ -4,16 +4,12 @@ import DataStore from './data/DataStore';
 import Table from './components/Table';
 import './data/data';
 
-type State = {
-    data: Immutable.List<Immutable.Map>
-};
-
-class Fire extends React.Component<{}, {}, State> {
-    static getStores(): Array<Store> {
+class App extends React.Component {
+    static getStores() {
         return [DataStore];
     }
 
-    static calculateState(prevState): State {
+    static calculateState(prevState) {
         return {
             data: DataStore.getState()
         };
@@ -24,5 +20,5 @@ class Fire extends React.Component<{}, {}, State> {
     }
 }
 
-const fire = Container.create(Fire);
-export default fire;
+const app = Container.create(App);
+export default app;

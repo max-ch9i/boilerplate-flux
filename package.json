@@ -7,7 +7,7 @@
     "live": "live-server"
   },
   "repository": {
-    "type" : "git",
+    "type": "git",
     "url": "https://github.com/maximus8891/boilerplate-flux"
   },
   "author": "Max Chernyavskyi <xamydnah@gmail.com>",
@@ -17,12 +17,13 @@
     "babel-preset-react": "^6.1.2",
     "babel-preset-stage-0": "^6.1.18",
     "babelify": "^7.2.0",
-    "browserify": "^12.0.1",
     "flux": "^2.1.1",
     "flux-queue-dispatcher": "^0.1.0",
+    "immutable": "^3.7.5",
     "live-server": "^0.8.2",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
-    "react-tap-event-plugin": "^0.2.1"
+    "react-tap-event-plugin": "^0.2.1",
+    "watchify": "^3.7.0"
   }
 }

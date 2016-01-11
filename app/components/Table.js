@@ -1,10 +1,6 @@
 import React from 'react';
 import {dispatch} from '../data/AppDispatcher';
 
-type Props = {
-    data: Immutable.List<Immutable.Map>
-};
-
 class Table extends React.Component<{}, Props, {}> {
     constructor(props) {
         super(props);
