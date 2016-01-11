@@ -2,11 +2,11 @@
 A simple boilerplate of the Flux architecture supporting asynchronous dispatches.
 
 ### Build
-See [package.json](https://github.com/maximus8891/boilerplate-flux/blob/master/package.json)
-Builds the script and inits a watcher.
+Build the script and init a watcher.
 ```
 npm run build
 ```
+See [package.json](https://github.com/maximus8891/boilerplate-flux/blob/master/package.json)
 
 ### Run
 ```
